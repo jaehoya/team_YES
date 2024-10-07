@@ -1,0 +1,224 @@
+/* 숨김 처리를 위한 hidden 클래스 */
+.hidden {
+  display: none !important; /* 이 속성이 있어야 해당 요소가 화면에서 완전히 숨겨집니다 */
+}
+
+/* 공통 스타일 */
+body {
+  margin: 0;
+  padding: 0;
+  background-size: 1980px 1080px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* 배경화면 선택 버튼 */
+#wallpaper-selector {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+/* 다크모드 및 배경화면 삭제 버튼들 */
+#action-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 230px;
+  display: flex;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+#action-buttons button {
+  width: 150px;
+  height: 40px;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* 배경화면 목록 */
+#wallpaper-options {
+  display: flex;
+  flex-wrap: nowrap;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: white;
+  padding: 10px;
+  border: 2px solid #333;
+  width: 500px;
+  max-height: 300px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+#wallpaper-options img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+#wallpaper-options img:hover {
+  transform: scale(1.2);
+}
+
+/* 다크모드 */
+body.dark-mode {
+  background-color: #111;
+  color: white;
+}
+
+body.dark-mode #wallpaper-selector, 
+body.dark-mode #reset-btn, 
+body.dark-mode #darkmode-toggle {
+  background-color: #444;
+  color: white;
+}
+
+/* To-Do List 스타일 */
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* 카테고리 섹션 스타일 */
+.category-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#category-input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#add-category-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+#add-category-button:hover {
+  background-color: #218838;
+}
+
+/* 카테고리 박스 스타일 */
+.category-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-box h2 {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-box h2 .delete-category {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.category-box h2 .delete-category:hover {
+  background-color: #c82333;
+}
+
+.todo-input-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.todo-input-container input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.todo-input-container button {
+  padding: 8px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.todo-input-container button:hover {
+  background-color: #0056b3;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  background-color: rgba(241, 241, 241, 0.8);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-item button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-item button:hover {
+  background-color: #c82333;
+}

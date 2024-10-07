@@ -1,0 +1,96 @@
+/* 공통 스타일 */
+body {
+  margin: 0;
+  padding: 0;
+  background-size: 1980px 1080px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 배경화면 선택 버튼 */
+#wallpaper-selector {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+/* 다크모드 및 배경화면 삭제 버튼들 */
+#action-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 230px;
+  display: flex;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+#action-buttons button {
+  width: 150px;
+  height: 40px;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* 배경화면 목록 */
+#wallpaper-options {
+  display: flex;
+  flex-wrap: nowrap;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: white;
+  padding: 10px;
+  border: 2px solid #333;
+  width: 500px;
+  max-height: 300px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+#wallpaper-options img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+#wallpaper-options img:hover {
+  transform: scale(1.2);
+}
+
+/* 숨김 처리 */
+.hidden {
+  display: none;
+}
+
+/* 다크모드 */
+body.dark-mode {
+  background-color: #111;
+  color: white;
+}
+
+body.dark-mode #wallpaper-selector, 
+body.dark-mode #reset-btn, 
+body.dark-mode #darkmode-toggle {
+  background-color: #444;
+  color: white;
+}
