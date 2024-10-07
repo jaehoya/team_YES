@@ -128,6 +128,7 @@ function renderCategory(category) {
   todoInput.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
       addTodo(category.id, todoInput.value);
+      todoInput.value = "";
     }
   });
 
